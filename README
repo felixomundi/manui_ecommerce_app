@@ -1,0 +1,2 @@
+## install .NET MAUI SDK: 
+dotnet workload install maui
