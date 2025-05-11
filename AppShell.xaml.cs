@@ -1,5 +1,4 @@
-﻿using ecommerce_app.Pages;
-namespace ecommerce_app
+﻿namespace ecommerce_app
 {
     public partial class AppShell : Shell
     {
@@ -7,7 +6,7 @@ namespace ecommerce_app
         {
             InitializeComponent();
             Routing.RegisterRoute("SendMoneyPage", typeof(Pages.Banking.SendMoneyPage));
-                Routing.RegisterRoute("TransactionsPage", typeof(Pages.Banking.TransactionsPage));
+            Routing.RegisterRoute("TransactionsPage", typeof(Pages.Banking.TransactionsPage));
         }
     }
 }

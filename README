@@ -1,2 +1,14 @@
-## install .NET MAUI SDK: 
+## install .NET MAUI SDK:
+
 dotnet workload install maui
+
+## back button
+
+<ContentPage.ToolbarItems>
+<ToolbarItem IconImageSource="back.png"
+                     Clicked="OnBackClicked"/>
+</ContentPage.ToolbarItems>
+private async void OnBackClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("..");
+        }

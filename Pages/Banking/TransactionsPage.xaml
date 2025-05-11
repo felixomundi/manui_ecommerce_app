@@ -1,26 +1,69 @@
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ecommerce_app.Pages.Banking.TransactionsPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ecommerce_app.Pages.Banking.TransactionsPage"
+    xmlns:local="clr-namespace:ecommerce_app"
+    Title="Transactions"
+    BackgroundColor="#f4f4f4">
     <ScrollView>
-        <VerticalStackLayout Padding="20"
-                Spacing="15">
-            <Label Text="Transaction History"
-                    FontSize="24"
-                    FontAttributes="Bold"/>
+        <!-- ScrollView to make content scrollable on small devices -->
+        <StackLayout Padding="10">
 
-            <CollectionView ItemsSource="{Binding Transactions}">
+            <!-- Categories Label -->
+            <Label Text="Categories"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   Padding="10"
+                   BackgroundColor="#f0f0f0"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"/>
+
+            <CollectionView ItemsSource="{Binding Transactions}"
+                            Margin="10"
+                            x:DataType="local:Models.TransactionItem"
+                            SelectionMode="None">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid Padding="10"
-                                ColumnDefinitions="*,Auto">
-                            <Label Text="{Binding Description}"/>
-                            <Label Text="{Binding Amount}"
-                                   TextColor="{Binding IsCredit}"/>
+                              Margin="0,5"
+                              BackgroundColor="White"
+                              ColumnDefinitions="Auto,*,Auto"
+                              HeightRequest="70"
+                              VerticalOptions="Center"
+                              Shadow="Small">
+
+                            <!-- Icon -->
+                            <Image Source="{Binding Icon}"
+                                   HeightRequest="40"
+                                   WidthRequest="40"
+                                   VerticalOptions="Center"
+                                   Margin="0,0,10,0"/>
+
+                            <!-- Category Info -->
+                            <VerticalStackLayout Grid.Column="1"
+                                                 Spacing="2"
+                                                 VerticalOptions="Center">
+                                <Label Text="{Binding Category}"
+                                       FontAttributes="Bold"
+                                       FontSize="16"/>
+                                <Label Text="{Binding TransactionCount, StringFormat='{}{0} transactions'}"
+                                       FontSize="13"
+                                       TextColor="Gray"/>
+                            </VerticalStackLayout>
+
+                            <!-- Amount -->
+                            <Label Grid.Column="2"
+                                   Text="{Binding Amount}"
+                                   FontAttributes="Bold"
+                                   FontSize="16"
+                                   TextColor="DarkGreen"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="End"/>
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-
-        </VerticalStackLayout>
-    </ScrollView>
+        </StackLayout>
+    </ScrollView>   
 </ContentPage>

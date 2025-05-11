@@ -1,6 +1,5 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-
 namespace ecommerce_app
 {
     public class BaseViewModel : INotifyPropertyChanged

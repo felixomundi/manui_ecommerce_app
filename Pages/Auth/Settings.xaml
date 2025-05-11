@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ecommerce_app.Pages.Auth.Settings"
+    xmlns:local="clr-namespace:ecommerce_app"
+    Title="Transactions"
+    BackgroundColor="#f4f4f4">
+    <ScrollView>
+        <!-- ScrollView to make content scrollable on small devices -->
+        <StackLayout Padding="10">
+
+            <!-- Categories Label -->
+            <Label Text="My Settings"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   Padding="10"
+                   BackgroundColor="#f0f0f0"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"/>
+
+            <CollectionView x:Name="SettingsCollectionView"
+                            ItemsSource="{Binding SettingsItems}"
+                            SelectionChanged="OnItemSelected">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal"
+                                Padding="10"
+                                Spacing="20">
+                            <!-- Setting Option Name -->
+                            <Label Text="{Binding Name}"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="StartAndExpand"
+                                   FontSize="18"/>
+                            <!-- Chevron Icon -->
+                            <Image Source="chevron_right.png"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="End"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

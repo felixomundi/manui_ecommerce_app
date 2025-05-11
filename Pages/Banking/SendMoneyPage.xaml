@@ -4,13 +4,13 @@
              Title="Send Money"
              Shell.NavBarIsVisible="True"
              Shell.TabBarIsVisible="False">
-    <VerticalStackLayout Padding="20">
-        <Label Text="Send Money"
-                FontSize="24"
-                FontAttributes="Bold"/>
-        <!-- Add your transfer form here -->
-        <Button Text="Back" 
-                Clicked="OnBackClicked"/>        
-    </VerticalStackLayout>
+        <VerticalStackLayout Padding="20">
+                <Label Text="Send Money"
+                       FontSize="24"
+                       FontAttributes="Bold"/>
+                <!-- Add your transfer form here -->
+                <Button Text="Back"
+                        Clicked="OnBackClicked"/>
+        </VerticalStackLayout>
 
 </ContentPage>

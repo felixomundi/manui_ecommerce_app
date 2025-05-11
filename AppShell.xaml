@@ -6,11 +6,12 @@
     xmlns:local="clr-namespace:ecommerce_app"
     Title="ecommerce_app">
     <TabBar>
-        <ShellContent
+
+        <!-- <ShellContent
             Title="Login Page"
             ContentTemplate="{DataTemplate local:Pages.Auth.LoginPage}"
             Route="Pages.Auth.LoginPage"
-            Shell.NavBarIsVisible="False"/>
+            Shell.NavBarIsVisible="False"/> -->
             
         <!-- <ShellContent
             Title="OTP Page"
@@ -18,16 +19,24 @@
             Route="Pages.Auth.OTPPage"
             Shell.NavBarIsVisible="False"/> -->
 
-        <ShellContent
+        <!-- <ShellContent
             Title="Products Page"
             ContentTemplate="{DataTemplate local:Pages.Ecommerce.ProductsPage}"
             Route="Pages.Ecommerce.ProductsPage"
-            Shell.NavBarIsVisible="False"/>
+            Shell.NavBarIsVisible="False"/> -->
 
             <ShellContent
-            Title="Home Page"
+            Title="Home"
+            Icon="home.png"
             ContentTemplate="{DataTemplate local:MainPage}"
             Route="MainPage"
+            Shell.NavBarIsVisible="False"/>
+                        
+            <ShellContent
+            Title="Settings"
+            Icon="settings.png"
+            ContentTemplate="{DataTemplate local:Pages.Auth.Settings}"
+            Route="Settings"
             Shell.NavBarIsVisible="False"/>
        
     </TabBar>
