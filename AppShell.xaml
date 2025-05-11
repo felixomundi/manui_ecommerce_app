@@ -11,19 +11,24 @@
             ContentTemplate="{DataTemplate local:Pages.Auth.LoginPage}"
             Route="Pages.Auth.LoginPage"
             Shell.NavBarIsVisible="False"/>
-        <ShellContent
+            
+        <!-- <ShellContent
             Title="OTP Page"
             ContentTemplate="{DataTemplate local:Pages.Auth.OTPPage}"
             Route="Pages.Auth.OTPPage"
-            Shell.NavBarIsVisible="False"/>
+            Shell.NavBarIsVisible="False"/> -->
+
         <ShellContent
             Title="Products Page"
             ContentTemplate="{DataTemplate local:Pages.Ecommerce.ProductsPage}"
             Route="Pages.Ecommerce.ProductsPage"
             Shell.NavBarIsVisible="False"/>
-        <ShellContent
-            Title="Home"
+
+            <ShellContent
+            Title="Home Page"
             ContentTemplate="{DataTemplate local:MainPage}"
-            Route="MainPage"/>
+            Route="MainPage"
+            Shell.NavBarIsVisible="False"/>
+       
     </TabBar>
 </Shell>

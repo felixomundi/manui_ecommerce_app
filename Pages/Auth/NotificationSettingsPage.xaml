@@ -1,0 +1,10 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ecommerce_app.Pages.Auth.NotificationSettingsPage"
+             Title="Notification Settings">
+    <StackLayout Padding="20" Spacing="16">
+        <Label Text="Manage your notification preferences" FontSize="18" />
+        <Switch IsToggled="True" />
+        <Label Text="Receive transaction alerts" />
+    </StackLayout>
+</ContentPage>

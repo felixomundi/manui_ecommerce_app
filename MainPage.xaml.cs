@@ -1,24 +1,17 @@
-﻿namespace ecommerce_app
+﻿using System.Collections.ObjectModel;
+using System.Windows.Input;
+using ecommerce_app.Models;
+using ecommerce_app.ViewModels;
+
+namespace ecommerce_app
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
-        }
-
-        private void OnCounterClicked(object? sender, EventArgs e)
-        {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            BindingContext = new DashboardViewModel(); // Attach the ViewModel here
         }
     }
+    
 }

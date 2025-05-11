@@ -1,0 +1,9 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ecommerce_app.Pages.Auth.PrivacyPage"
+             Title="Privacy">
+    <StackLayout Padding="20" Spacing="16">
+        <Label Text="Privacy options" FontSize="18" />
+        <Label Text="This section allows you to manage your privacy settings." />
+    </StackLayout>
+</ContentPage>
