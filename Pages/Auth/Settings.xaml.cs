@@ -9,7 +9,7 @@ namespace ecommerce_app.Pages.Auth
 
         public Settings()
         {
-             InitializeComponent();
+            InitializeComponent();
 
             // Initialize the settings items
             SettingsItems = new ObservableCollection<SettingItem>
@@ -44,7 +44,9 @@ namespace ecommerce_app.Pages.Auth
                             await Navigation.PushAsync(new ChangePasswordPage());
                             break;
                         case "Logout":
-                            // Handle logout logic
+                            var usersPage = App.Services.GetService<UsersPage>();
+                            if (usersPage != null)
+                                await Navigation.PushAsync(usersPage);
                             break;
                         default:
                             break;
@@ -56,7 +58,7 @@ namespace ecommerce_app.Pages.Auth
             }
         }
 
-       
-        
+
+
     }
 }

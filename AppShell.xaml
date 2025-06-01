@@ -12,7 +12,7 @@
             ContentTemplate="{DataTemplate local:Pages.Auth.LoginPage}"
             Route="Pages.Auth.LoginPage"
             Shell.NavBarIsVisible="False"/> -->
-            
+
         <!-- <ShellContent
             Title="OTP Page"
             ContentTemplate="{DataTemplate local:Pages.Auth.OTPPage}"
@@ -25,19 +25,28 @@
             Route="Pages.Ecommerce.ProductsPage"
             Shell.NavBarIsVisible="False"/> -->
 
-            <ShellContent
+        <ShellContent
             Title="Home"
             Icon="home.png"
             ContentTemplate="{DataTemplate local:MainPage}"
             Route="MainPage"
             Shell.NavBarIsVisible="False"/>
-                        
-            <ShellContent
+
+
+        <!-- <ShellContent
+            Title="UsersPage"
+            Icon="profile.jpg" 
+            ContentTemplate="{DataTemplate local:Pages.Auth:UsersPage}"
+            Route="UsersPage"
+            Shell.NavBarIsVisible="False"
+            /> -->
+
+        <ShellContent
             Title="Settings"
             Icon="settings.png"
             ContentTemplate="{DataTemplate local:Pages.Auth.Settings}"
             Route="Settings"
             Shell.NavBarIsVisible="False"/>
-       
+
     </TabBar>
 </Shell>

@@ -12,6 +12,9 @@ namespace ecommerce_app.Pages.Auth
         {
             InitializeComponent();
         }
+        public static string BaseAddress =
+        DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:5000" : "http://localhost:5000";
+        public static string TodoItemsUrl = $"{BaseAddress}/api/todoitems/";
 
         private async void OnLoginClicked(object sender, EventArgs e)
         {
@@ -49,7 +52,7 @@ namespace ecommerce_app.Pages.Auth
                 }
                 else
                 {
-                   
+
                     StatusLabel.Text = "Login failed. Check credentials.";
                     StatusLabel.IsVisible = true;
                     var error = JsonSerializer.Deserialize<Dictionary<string, string>>(body);

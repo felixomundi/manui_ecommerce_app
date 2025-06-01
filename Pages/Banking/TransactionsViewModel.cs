@@ -1,5 +1,6 @@
 using System.Collections.ObjectModel;
 using ecommerce_app.Models;
+using ecommerce_app.ViewModels;
 namespace ecommerce_app.Pages.Banking
 {
     public class TransactionsViewModel : BaseViewModel
